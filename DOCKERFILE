@@ -1,0 +1,11 @@
+# STEP 1: Choose the Base Image 
+FROM node:latest 
+FROM ubuntu:latest
+
+WORKDIR /AUTHENTICATION 
+
+COPY package*.json ./
+RUN npm install 
+COPY . . 
+EXPOSE 3000
+CMD ["npm run dev"] 
